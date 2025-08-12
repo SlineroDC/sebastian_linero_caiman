@@ -12,8 +12,8 @@ export const pool = createPool({
 host: process.env.DB_HOST || 'localhost',
 port: process.env.DB_PORT || 3306,
 user: process.env.DB_USER || 'root',
-password: process.env.DB_PASSWORD,
-database: process.env.DB_DATABASE,
+password: 'Qwe.123*' ,
+database: 'pd_sebastian_linero_caiman',
 waitForConnections: true, // Wait for a connection to be available if all are in use
 connectionLimit: 10, // Maximum number of connections in the pool
 queueLimit: 0 // No limit on the number of queued connection requests
