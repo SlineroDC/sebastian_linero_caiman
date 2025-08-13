@@ -1,4 +1,4 @@
-client_name,id_number,adress,phone,mail
+d,name,email,phone_number,address,is_active,created_at,updated_at
 Angel Daniel,149186547,"USNS Davis
 FPO AP 78518",(873)222-2692x09480,rmiller@boyer.com
 Matthew Wilson,475925688,"42023 Barrett Path Suite 281

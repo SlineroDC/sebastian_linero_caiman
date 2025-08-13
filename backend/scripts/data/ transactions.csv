@@ -1,4 +1,4 @@
-ID_advice,date and hour,quantity ,status,type
+id,invoice_id,platform_id,transaction_reference,amount,status,transaction_date,notes
 TXN001,2024-06-01 10:00:00,38940,Pendiente,Pago de Factura
 TXN002,2024-07-09 12:00:00,75145,Pendiente,Pago de Factura
 TXN003,2024-06-13 10:00:00,179217,Fallida,Pago de Factura
