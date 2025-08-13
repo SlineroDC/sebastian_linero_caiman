@@ -50,16 +50,22 @@ Clone the Repository
 git clone [Your Repository URL]
 cd pd_sebastian_linero_caiman
 
-Backend Setup
+## Backend Setup
 
-Navigate to the backend folder
+- Navigate to the backend folder
+
+```
 cd backend
+```
 
-`` Install dependencies
+``` 
+Install dependencies
 npm install
 
-Create a .env file in the /backend directory and fill it with your database credentials. You can use the .env.example as a template:
+```
+- Create a .env file in the /backend directory and fill it with your database credentials. You can use the .env.example as a template:
 
+```
 .env
 Database Configuration
 DB_HOST=localhost
@@ -71,6 +77,7 @@ DB_DATABASE=pd_sebastian_linero_caiman
 Server Configuration
 PORT=3000
 
+```
 Database Setup
 Connect to your MySQL server.
 
@@ -96,7 +103,7 @@ npm install
 Run the development server
 npm run dev
 
-The frontend will be accessible at http://localhost:5173 (or the port indicated by Vite).
+The frontend will be accessible at http://localhost:3000 (or the port indicated by Vite).
 CSV Bulk Load Instructions
 To populate the database with the initial data from the provided CSV file, run the following command from the project's root directory after you have successfully set up the database.
 node backend/scripts/load-data.js
@@ -104,22 +111,36 @@ node backend/scripts/load-data.js
 This script will read the datos.csv file, process the data, and insert it into the corresponding tables (clients, invoices, transactions, payment_platforms).
 Advanced Queries & API Endpoints
 The API provides several endpoints for managing resources and generating reports. The main endpoints are detailed in the included Postman collection.
-Client Management (CRUD)
 
-GET /api/clients: Retrieves a paginated list of all clients.
-GET /api/clients/:id: Retrieves a single client by their ID.
-POST /api/clients: Creates a new client.
-PUT /api/clients/:id: Updates an existing client.
-DELETE /api/clients/:id: Deletes a client.
-Financial Reports (Advanced Queries)
+## Client Management (CRUD)
+
+- GET /api/clients: Retrieves a paginated list of all clients.
+- GET /api/clients/:id: Retrieves a single client by their ID.
+- POST /api/clients: Creates a new client.
+- PUT /api/clients/:id: Updates an existing client.
+- DELETE /api/clients/:id: Deletes a client.
+
+## Financial Reports (Advanced Queries)
 These endpoints address key business questions:
-GET /api/reports/total-paid-by-client
+- GET /api/reports/total-paid-by-client
 
-### Requirement: "As a system administrator, I need to know how much each client has paid in total, to keep track of income and verify overall balances."
-Description: This endpoint returns a summary for each client, detailing the total amount invoiced, the total amount paid, and the pending balance.
-GET /api/reports/pending-invoices
-Requirement: "As a financial manager, I need to identify invoices that have not yet been fully paid, along with the client's name and any associated transactions, to manage collections or follow-ups."
+### Requirement: 
+"As a system administrator, I need to know how much each client has paid in total, to keep track of income and verify overall balances."
+
+### Description: 
+This endpoint returns a summary for each client, detailing the total amount invoiced, the total amount paid, and the pending balance.
+
+- GET /api/reports/pending-invoices
+
+### Requirement: 
+"As a financial manager, I need to identify invoices that have not yet been fully paid, along with the client's name and any associated transactions, to manage collections or follow-ups."
 Description: This endpoint lists all invoices with a status of 'pending' or 'partially_paid', including details about the client and a summary of payments made.
-GET /api/reports/transactions-by-platform
-Requirement: "As an analyst, I need to be able to see all transactions made from a specific platform (like Nequi or Daviplata), including which client they belong to and which invoice they are paying."
-Description: This endpoint allows filtering transactions by a specific payment platform, providing a detailed view of fund movements for reconciliation purposes.
+
+- GET /api/reports/transactions-by-platform.
+
+### Requirement:
+"As an analyst, I need to be able to see all transactions made from a specific platform (like Nequi or Daviplata), including which client they belong to and which invoice they are paying."
+
+### Description:
+This endpoint allows filtering transactions by a specific payment platform, providing a detailed view of fund movements for reconciliation purposes.
+

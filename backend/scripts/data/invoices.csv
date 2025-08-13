@@ -1,4 +1,4 @@
-advice_ number,year_mouth ,quantity_advice,quantity_sell
+id,client_id,invoice_number,total_amount,paid_amount,status,due_date,issue_date,description
 FAC7068,2024-06,39940,0
 FAC6577,2024-06,76145,75145
 FAC5707,2024-06,179217,179217
